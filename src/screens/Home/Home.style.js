@@ -3,7 +3,7 @@ import { moderateScale, moderateScaleVertical, textScale } from '../../styles/re
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal:moderateScale(24),
+        paddingHorizontal:moderateScale(15),
         backgroundColor:"black"
         
 

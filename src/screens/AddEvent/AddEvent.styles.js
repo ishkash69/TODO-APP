@@ -27,6 +27,7 @@ export default styles = StyleSheet.create({
     },
     inputStyle:{
         marginTop:20,
-        marginBottom:24
+        marginBottom:24,
+
     }
 });

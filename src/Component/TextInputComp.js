@@ -10,6 +10,7 @@ const TextInputComp = ({
     placeholder,
     onChangeText=()=>{},
     value,
+    multiline
 
 }) => {
     return (
@@ -17,6 +18,7 @@ const TextInputComp = ({
             <TextInput
             style={{...styles.input
             }}
+            multiline={multiline}
             placeholder={placeholder}
             placeholderTextColor={placholderTextColor}
             value={value}

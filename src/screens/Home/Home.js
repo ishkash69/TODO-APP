@@ -13,9 +13,13 @@ const Home = ({
 }) => {
 
     const [data,setData]=useState([])
+    console.log(data,'datatatatatata---------...>>.')
     const fetchData = ()=>{
         const paramData = route?.params
-        setData(paramData)
+        if(!!paramData){
+            setData(paramData)
+        }
+       
     console.log(paramData,"pramdataa>>>>>")
 
     }
@@ -30,11 +34,11 @@ const Home = ({
         console.log('items',item)
         return(
             
-<View style={{height:80,marginTop:14,borderRadius:10,borderColor:"#00FFFF",borderWidth:1,padding:8}}>
-                <Text style={{color:"#00FFFF",marginTop:4}}>
+<View style={{marginTop:14,borderRadius:10,borderColor:"#00FFFF",borderWidth:3,padding:8}}>
+                <Text style={{color:"#00FFFF",fontSize:18}}>
                     Title:{item?.title}
                 </Text>
-                <Text style={{color:"#00FFFF",marginTop:22}}>
+                <Text style={{color:"#00FFFF",marginTop:12,fontSize:18}}>
                     Description:{item?.desc}
                 </Text>
             </View>  

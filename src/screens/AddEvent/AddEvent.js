@@ -20,6 +20,7 @@ const AddEvent = ({navigation, route}) => {
 
     const onSave=()=>{
         let currentData = [{title:todo.title,desc:todo.desc}]
+        let mergedData = [...currentData,...prevData]
         if(todo.title==''&& todo.desc==""){
             alert('please enter full details')
             return
@@ -32,7 +33,7 @@ const AddEvent = ({navigation, route}) => {
             return
         }
         else{
-            navigation.navigate(NavigationString.HOME,[...currentData,...prevData])
+            navigation.navigate(NavigationString.HOME,mergedData)
         }
         
         
@@ -63,6 +64,7 @@ const AddEvent = ({navigation, route}) => {
             }}
             />
             <TextInputComp
+            multiline={true}
             placeholder={'Description'}
             placholderTextColor={"#00FFFF"}
             inputStyle={styles.inputStyle}
@@ -76,10 +78,7 @@ const AddEvent = ({navigation, route}) => {
             title='SAVE'
             onPress={onSave}
             />
-
-
-           
-                </View>
+            </View>
           
 
         </View>
